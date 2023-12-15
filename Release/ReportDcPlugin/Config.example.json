@@ -1,0 +1,10 @@
+{
+  "Prefix": "Prefix",
+  "PlayerResponseNotEnoughInput": "Daha fazla bilgi vermelisiniz",
+  "Commands": {
+    "report": "https://discord.com/api/webhooks/****************/*************************",
+    "report2": "https://discord.com/api/webhooks/****************/*************************",
+    "reports": "https://discord.com/api/webhooks/****************/*************************"
+  },
+  "PlayerResponseSuccessfull": "Report başarıyla iletildi"
+}
