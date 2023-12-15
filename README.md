@@ -4,7 +4,8 @@ Simply it will send message to discord web hook whatever the player types
 
 Example Usage
 ```!report something happened, send admin please```
-
+Example Discord Output
+``` Server1 | Player1 | 7777777777(steamid) =  something happened, send admin please```
 
 
 Add as many as commands as you like into ```Commands``` section of the json as given example. 
@@ -13,14 +14,15 @@ Add as many as commands as you like into ```Commands``` section of the json as g
 
 ```json
 {
-  "Prefix": "Prefix",
-  "PlayerResponseNotEnoughInput": "Give More Specific Detail",
-  "Commands": {
+  "Prefix": "Prefix", //prefix to player response
+  "PlayerResponseNotEnoughInput": "Daha fazla bilgi vermelisiniz", //when player input is not enough like when player only types !report
+  "Commands": { //add as many you like like this
     "report": "https://discord.com/api/webhooks/****************/*************************",
     "report2": "https://discord.com/api/webhooks/****************/*************************",
     "reports": "https://discord.com/api/webhooks/****************/*************************"
   },
-  "PlayerResponseSuccessfull": "Report Submitted Successfully"
+  "PlayerResponseSuccessfull": "Report başarıyla iletildi", //This will be shown to player
+  "ServerName": "Server1" //This will be shown in discord, if you dont want to see just remove it like "ServerName": "" or completly remove the property
 }
 ```
 

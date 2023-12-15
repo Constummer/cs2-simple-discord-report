@@ -1,10 +1,11 @@
 {
-  "Prefix": "Prefix",
-  "PlayerResponseNotEnoughInput": "Daha fazla bilgi vermelisiniz",
-  "Commands": {
+  "Prefix": "Prefix", //prefix to player response
+  "PlayerResponseNotEnoughInput": "Daha fazla bilgi vermelisiniz", //when player input is not enough like when player only types !report
+  "Commands": { //add as many you like like this
     "report": "https://discord.com/api/webhooks/****************/*************************",
     "report2": "https://discord.com/api/webhooks/****************/*************************",
     "reports": "https://discord.com/api/webhooks/****************/*************************"
   },
-  "PlayerResponseSuccessfull": "Report başarıyla iletildi"
+  "PlayerResponseSuccessfull": "Report başarıyla iletildi", //This will be shown to player
+  "ServerName": "Server1" //This will be shown in discord, if you dont want to see just remove it like "ServerName": "" or completly remove the property
 }

@@ -27,6 +27,7 @@ public class ReportDcPlugin : BasePlugin
         public string PlayerResponseNotEnoughInput { get; set; }
         public Dictionary<string, string> Commands { get; set; }
         public string PlayerResponseSuccessfull { get; set; }
+        public string ServerName { get; internal set; }
     }
 
     private static Config? _config;
@@ -51,7 +52,8 @@ public class ReportDcPlugin : BasePlugin
                     {"report","https://discord.com/api/webhooks/****************/*************************" },
                     {"report2","https://discord.com/api/webhooks/****************/*************************" },
                     {"reports","https://discord.com/api/webhooks/****************/*************************" }
-                }
+                },
+                ServerName = "Server1"
             };
             File.WriteAllText(configPath, JsonSerializer.Serialize(data, new JsonSerializerOptions { WriteIndented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping }));
             _config = data;
@@ -79,7 +81,12 @@ public class ReportDcPlugin : BasePlugin
                         player!.PrintToChat(AddPrefixToTheMessage(_config.PlayerResponseNotEnoughInput, _config.Prefix));
                     };
 
-                    var msg = $"{player.PlayerName}|{player.SteamID} = {info.ArgString}";
+                    var msg = $"{player.PlayerName} | {player.SteamID} = {info.ArgString}";
+
+                    if (string.IsNullOrWhiteSpace(_config.ServerName) == false)
+                    {
+                        msg = $"{_config.ServerName} | {msg}";
+                    }
 
                     Server.NextFrame(async () =>
                     {
