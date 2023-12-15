@@ -2,10 +2,10 @@ Simple Discord Report Plugin
 
 Simply it will send message to discord web hook whatever the player types
 
-Example Usage
+- Example Usage
 ```!report something happened, send admin please```
 
-Example Discord Output
+- Example Discord Output
 ``` Server1 | Player1 | 7777777777(steamid) =  something happened, send admin please```
 
 
